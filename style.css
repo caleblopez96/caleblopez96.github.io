@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;900&family=Nunito:wght@200;1000&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #F8F8FF;
+}
+
+header {
+  color: #353839;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1.5rem;
+  padding: .75rem;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px dotted #353839;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+  padding: .5rem 0;
+}
+
+a,
+a:visited {
+  color: #353839;
+  text-decoration: none;
+}
+
+header p {
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  width: 60%;
+  margin: 3.5rem auto;
+  line-height: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.hero p {
+  line-height: 1.5rem;
+}
+
+.projects {
+  display: grid;
+  grid-template-areas: 
+  "ILA CPC"
+  "RPS JSC"
+  "SPN SPN"
+  ;
+  width: 65%;
+  margin: 2rem auto;
+  gap: 1.25rem;
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  gap: .5rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  border: 2px dotted #353839;
+  padding: 1.25rem;
+}
+
+.card:first-child {
+  background-color: #F8F8FF;
+  grid-area: ILA;
+}
+
+.card:first-child:hover {
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.833),
+    rgba(242, 239, 239, 0.755)
+  ), url(/images/testGIF.gif);
+  cursor: pointer;
+}
+
+.cpc {
+  background-color: #F8F8FF;
+  background-size: cover;
+  grid-area: CPC;
+}
+
+.cpc:hover {
+  background-image: url(/images/cpcChallenge.gif);
+  cursor: pointer;
+}
+
+.rps {
+  background-color: #F8F8FF;
+  grid-area: RPS;
+}
+
+.rps:hover {
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.533),
+    rgba(242, 239, 239, 0.455)
+  ),url(images/rps.gif);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.clock {
+  background-color: #F8F8FF;
+  grid-area: JSC;
+}
+
+.clock:hover {
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.833),
+    rgba(242, 239, 239, 0.755)
+  ), url(/images/clock.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.spinner {
+  background-color: #F8F8FF;
+  text-align: center;
+  grid-area: SPN;
+}
+
+.spinner .iconWrapper {
+  justify-content: center;
+}
+
+.spinner:hover {
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.833),
+    rgba(242, 239, 239, 0.755)
+  ), url(/images/spinner.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.spinner .buttonWrapper {
+  justify-content: center;
+}
+
+.button {
+  appearance: none;
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  color: #353839;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+  width: fit-content;
+}
+
+.button:hover {
+  color: #FAfafa;
+  background-color: #353839;
+}
+
+.iconWrapper {
+  display: flex;
+  gap: .5rem;
+  padding: .5rem 0;
+}
+
+.icon {
+  max-height: 32px;
+  max-width: 32px;
+}
+
+.buttonWrapper {
+  display: flex;
+  gap: .5rem;
+}
+
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1.5rem auto;
+  width: 60%;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.aboutMe h3 {
+  padding: 1rem 0;
+  font-family: 'Inter', sans-serif;
+}
+
+li {
+  padding: .5rem;
+}
+
+::marker {
+  content: "-";
+}
+
+.job {
+  border-bottom: 2px dotted #353839;
+}
+
+.school {
+  padding: 1rem 0;
+  border-bottom: 2px dotted #353839;
+  margin-bottom: 1rem;
+}
+
+.school:last-child {
+  border: none;
+}
+
+.italic {
+  font-style: italic;
+  font-family: 'Inter', sans-serif;
+}
+
+.bold {
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+
+footer {
+  border-top: 2px dotted #353839;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  padding: .5rem 0;
+}
+
+.contactMe {
+  display: flex;
+  flex-flow: row wrap;
+  margin: auto;
+  width: 50%;
+  border-radius: 20px;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.links {
+  display: flex;
+  margin: auto;
+  width: 50%;
+  padding: .5rem 0;
+  justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    width: 80%;
+    justify-content: flex-start;
+  }
+  .projects {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .spinner {
+    text-align: start;
+  }
+
+  .spinner .iconWrapper {
+    justify-content: flex-start;
+  }
+
+  .spinner .buttonWrapper {
+    justify-content: flex-start;
+  }
+
+  .aboutMe {
+    width: 85%;
+  }
+}
