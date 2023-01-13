@@ -13,6 +13,7 @@
 body {
   min-height: 100vh;
   background-color: #F8F8FF;
+  background-image: linear-gradient(to left top, #f0ffff, #f1fdff, #f3fcff, #f5faff, #f8f8ff);
 }
 
 header {
@@ -38,6 +39,11 @@ a,
 a:visited {
   color: #353839;
   text-decoration: none;
+}
+
+header a:hover,
+footer a:hover {
+  text-decoration: underline;
 }
 
 header p {
@@ -89,7 +95,7 @@ header p {
 }
 
 .card:first-child {
-  background-color: #F8F8FF;
+  background-color: #F5F5F5;
   grid-area: ILA;
 }
 
@@ -102,7 +108,7 @@ header p {
 }
 
 .cpc {
-  background-color: #F8F8FF;
+  background-color: #F5F5F5;
   background-size: cover;
   grid-area: CPC;
 }
@@ -113,7 +119,7 @@ header p {
 }
 
 .rps {
-  background-color: #F8F8FF;
+  background-color: #F5F5F5;
   grid-area: RPS;
 }
 
@@ -128,7 +134,7 @@ header p {
 }
 
 .clock {
-  background-color: #F8F8FF;
+  background-color: #F5F5F5;
   grid-area: JSC;
 }
 
@@ -144,7 +150,7 @@ header p {
 }
 
 .spinner {
-  background-color: #F8F8FF;
+  background-color: #F5F5F5;
   text-align: center;
   grid-area: SPN;
 }
