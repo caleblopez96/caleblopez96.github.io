@@ -12,7 +12,6 @@
 
 body {
   min-height: 100vh;
-  background-color: #F8F8FF;
   background-image: linear-gradient(to left top, #f0ffff, #f1fdff, #f3fcff, #f5faff, #f8f8ff);
 }
 
