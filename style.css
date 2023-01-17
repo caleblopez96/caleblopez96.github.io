@@ -10,9 +10,13 @@
   font-weight: normal;
 }
 
+html {
+  background-image: linear-gradient(to left top, #f0ffff, #f1fdff, #f3fcff, #f5faff, #f8f8ff);
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
-  background-image: linear-gradient(to left top, #f0ffff, #f1fdff, #f3fcff, #f5faff, #f8f8ff);
 }
 
 header {
@@ -95,8 +99,8 @@ header p {
 }
 
 .card {
-  -webkit-animation: scale-in-ver-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: scale-in-ver-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: scale-in-ver-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: scale-in-ver-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @-webkit-keyframes scale-in-ver-center {
@@ -387,6 +391,11 @@ footer {
   width: 50%;
   padding: .5rem 0;
   justify-content: space-evenly;
+}
+
+.links a:nth-child(2) {
+  height: 48px;
+  width: 48px;
 }
 
 @media only screen and (max-width: 768px) {
