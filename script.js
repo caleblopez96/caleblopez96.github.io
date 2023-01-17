@@ -4,10 +4,15 @@ const widget = document.querySelector('.widget');
 const header = document.querySelectorAll('.headerLink');
 const card = document.querySelectorAll('.card');
 
+
+ball.addEventListener('click', ()=> {
+    nightMode()
+});
+
 const nightMode = () => {
-    body.style.backgroundColor = '#171717'
     ball.classList.toggle('nightMode')
     widget.style.backgroundColor = '#fafafa'
+    body.style.backgroundColor = '#171717'
     body.style.color = '#fafafa'
     headerNightColors()
     cardNightColors()
@@ -19,10 +24,6 @@ const dayMode = () => {
     body.style.backgroundColor = '#fafafa'
     widget.style.backgroundColor = '#fafafa'
 };
-
-ball.addEventListener('click', ()=> {
-    nightMode()
-});
 
 const headerNightColors = () => {
     header.forEach(element => {
