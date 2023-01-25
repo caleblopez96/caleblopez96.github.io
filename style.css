@@ -126,6 +126,7 @@ header p {
 }
 
 .card {
+  animation: scale-in-ver-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   background-color: #fafafa;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
@@ -135,10 +136,6 @@ header p {
   border-radius: 20px;
   border: 2px dotted #353839;
   padding: 1.25rem;
-}
-
-.card {
-	animation: scale-in-ver-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes scale-in-ver-center {
