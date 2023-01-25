@@ -126,6 +126,7 @@ header p {
 }
 
 .card {
+  background-color: #fafafa;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
   gap: .5rem;
@@ -137,31 +138,15 @@ header p {
 }
 
 .card {
-  -webkit-animation: scale-in-ver-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: scale-in-ver-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-@-webkit-keyframes scale-in-ver-center {
-  0% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    opacity: 1;
-  }
 }
 
 @keyframes scale-in-ver-center {
   0% {
-    -webkit-transform: scaleY(0);
     transform: scaleY(0);
     opacity: 1;
   }
   100% {
-    -webkit-transform: scaleY(1);
     transform: scaleY(1);
     opacity: 1;
   }
@@ -182,64 +167,31 @@ header p {
 }
 
 .text-focus-in {
-	-webkit-animation: text-focus-in 1.15s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	animation: text-focus-in 1.15s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-
-  @-webkit-keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
 }
 
 @keyframes text-focus-in {
   0% {
-    -webkit-filter: blur(12px);
     filter: blur(12px);
     opacity: 0;
   }
   100% {
-    -webkit-filter: blur(0px);
     filter: blur(0px);
     opacity: 1;
   }
 }
 
 .focus-in-contract {
-	-webkit-animation: focus-in-contract 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: focus-in-contract 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-@-webkit-keyframes focus-in-contract {
-  0% {
-    letter-spacing: 1em;
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
 }
 
 @keyframes focus-in-contract {
   0% {
     letter-spacing: 1em;
-    -webkit-filter: blur(12px);
     filter: blur(12px);
     opacity: 0;
   }
   100% {
-    -webkit-filter: blur(0px);
     filter: blur(0px);
     opacity: 1;
   }
@@ -328,7 +280,6 @@ header p {
   padding: 6px 16px;
   transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
   user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: middle;
   white-space: nowrap;
