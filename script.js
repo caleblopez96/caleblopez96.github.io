@@ -5,7 +5,7 @@ const widget = document.querySelector('.widget');
 const header = document.querySelectorAll('.headerLink');
 const card = document.querySelectorAll('.card');
 
-// invoking night mode when ball is clicked
+// invoking night mode on click
 ball.addEventListener('click', ()=> {
     nightMode()
 });
