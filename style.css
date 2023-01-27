@@ -283,6 +283,12 @@ header p {
   word-wrap: break-word;
   width: fit-content;
 }
+/* fix this 
+#introduction {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+} */
 
 .button:hover {
   color: #F5F5F5;

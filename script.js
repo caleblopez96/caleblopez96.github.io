@@ -4,6 +4,7 @@ const body = document.querySelector('body');
 const widget = document.querySelector('.widget');
 const header = document.querySelectorAll('.headerLink');
 const card = document.querySelectorAll('.card');
+const contributions = document.querySelector('#contributions');
 
 // invoking night mode on click
 ball.addEventListener('click', ()=> {
@@ -50,3 +51,23 @@ const footerLinkColors = () => {
         element.style.borderRadius = '50%'
     })
 };
+
+
+/* function that displays animation of github contributions in the last year... Finish/fix
+
+let updates = 0;
+
+const commitCountAnimation = anime({
+    targets: '#contributions',
+    translateX: 270,
+    delay: 1000,
+    direction: 'alternate',
+    loop: 3,
+    easing: 'easeInOutCirc',
+    update: function(anim) {
+        updates++
+        contributions.value = 'progress :'+Math.round(anim.progress)+'%';
+        updates.valueOf = 'updates : '+ updates;
+    }
+})
+*/
