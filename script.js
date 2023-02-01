@@ -40,7 +40,6 @@ const headerNightColors = () => {
 const cardNightColors = () => {
     card.forEach(element => {
         element.style.color = '#121212'
-        element.style.backgroundColor = '#555555'
     })
 };
 
