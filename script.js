@@ -7,7 +7,7 @@ const card = document.querySelectorAll('.card');
 const contributions = document.querySelector('#contributions');
 
 // invoking night mode on click
-ball.addEventListener('click', ()=> {
+ball.addEventListener('click', () => {
     nightMode()
 });
 
