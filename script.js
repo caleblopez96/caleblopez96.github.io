@@ -15,7 +15,7 @@ ball.addEventListener('click', ()=> {
 const nightMode = () => {
     ball.classList.toggle('nightMode')
     widget.style.backgroundColor = '#fafafa'
-    body.style.backgroundColor = '#171717'
+    body.style.backgroundColor = '#0b1117'
     body.style.color = '#fafafa'
     headerNightColors()
     cardNightColors()
@@ -39,12 +39,13 @@ const headerNightColors = () => {
 // function that alters card colors for night mode
 const cardNightColors = () => {
     card.forEach(element => {
-        element.style.color = '#252525'
+        element.style.color = '#121212'
         element.style.backgroundColor = '#555555'
     })
 };
 
 // function that alters footer colors for night mode
+/* work in progress. need to complete this fix */
 const footerLinkColors = () => {
     footerLinks.foreach(element => {
         element.style.backgroundColor = '#fafafa'
