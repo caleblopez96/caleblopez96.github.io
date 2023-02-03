@@ -283,10 +283,19 @@ header p {
   word-wrap: break-word;
   width: fit-content;
 }
-/* fix this 
-#introduction {
-
-} */
+/* scroll animation? */
+.scrollAnimation {
+  animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.00) both;
+}
+@keyframes fade-in-fwd {
+  0% {
+    transform: translateZ(-80px);
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
 
 .button:hover {
   color: #F5F5F5;

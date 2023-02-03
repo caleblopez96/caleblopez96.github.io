@@ -9,12 +9,13 @@ const job = document.querySelector('.job')
 // invoking night mode on click
 ball.addEventListener('click', () => {
     nightMode()
-        /*ball.addEventListener('click', () =>{
+        ball.addEventListener('click', () =>{
         dayMode()
-    })*/ 
+    })
     // when I add this it works. it makes it day mode after 
     // second click, but the styles for the header and other stuff are wrong.
-    // fix the styles so when day mode is toggled, the text doesnt blend into the background. --> add styles to daymode() func.
+    // fix the styles so when day mode is toggled, the text doesnt blend into the background. --> to do this, just add styles 
+    // to daymode() func.
 });
 
 // styles for night mode
@@ -33,6 +34,7 @@ const dayMode = () => {
     ball.classList.toggle('ball')
     body.style.backgroundColor = '#fafafa'
     widget.style.backgroundColor = '#fafafa'
+    body.style.color = "#353839"
 };
 
 // function that alters header links for night mode.
