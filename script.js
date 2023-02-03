@@ -9,7 +9,11 @@ const header = document.querySelectorAll('.headerLink');
 const card = document.querySelectorAll('.card');
 const job = document.querySelector('.job');
 
-// invoking night mode on click
+// Variables
+const offWhite = '#fafafa'
+const offBlack = "#353839"
+
+// Functions invokes day/night modes
 ball.addEventListener('click', () => {
     nightMode()
     ball.addEventListener('click', () =>{
@@ -17,39 +21,41 @@ ball.addEventListener('click', () => {
     })
 });
 
-// styles for night mode
+// Function that contains styles for nightmode
 const nightMode = () => {
     ball.classList.toggle('nightMode')
-    widget.style.backgroundColor = '#fafafa'
+    widget.style.backgroundColor = offWhite
     body.style.backgroundColor = '#0b1117'
-    body.style.color = '#fafafa'
+    body.style.color = offWhite
     headerNightColors()
     cardColors()
   /* add white icons as the source for footer links when night mode. */
 };
 
-// function that pushes dayMode styles
+// function that contains styles for daymode
 const dayMode = () => {
     ball.classList.toggle('.ball')
-    widget.style.backgroundColor = '#fafafa'
-    body.style.backgroundColor = '#fafafa'
-    body.style.color = "#353839"
+    widget.style.backgroundColor = offWhite
+    body.style.backgroundColor = offWhite
+    body.style.color = offBlack
     headerDayColors()
 };
 
+// function that contains style changes for header for night
 const headerNightColors = () => {
     header.forEach(element => {
-        element.style.color = '#fafafa'
+        element.style.color = offWhite
     })
 };
 
+// function that contains style changes for header for day
 const headerDayColors = () => {
     header.forEach(element => {
-        element.style.color = '#353839'
+        element.style.color = offBlack
     })
 }
 
-// function that alters card colors for night mode
+// function that contains styles for cards
 const cardColors = () => {
     card.forEach(element => {
         element.style.color = '#121212'
