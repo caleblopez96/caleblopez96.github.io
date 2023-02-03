@@ -1,21 +1,20 @@
+// FILE PENDING REFACTOR
+
 // Selectors
+const html = document.querySelector('html')
 const ball = document.querySelector('.ball');
 const body = document.querySelector('body');
 const widget = document.querySelector('.widget');
 const header = document.querySelectorAll('.headerLink');
 const card = document.querySelectorAll('.card');
-const job = document.querySelector('.job')
+const job = document.querySelector('.job');
 
 // invoking night mode on click
 ball.addEventListener('click', () => {
     nightMode()
-        ball.addEventListener('click', () =>{
+    ball.addEventListener('click', () =>{
         dayMode()
     })
-    // when I add this it works. it makes it day mode after 
-    // second click, but the styles for the header and other stuff are wrong.
-    // fix the styles so when day mode is toggled, the text doesnt blend into the background. --> to do this, just add styles 
-    // to daymode() func.
 });
 
 // styles for night mode
@@ -25,49 +24,45 @@ const nightMode = () => {
     body.style.backgroundColor = '#0b1117'
     body.style.color = '#fafafa'
     headerNightColors()
-    cardNightColors()
+    cardColors()
   /* add white icons as the source for footer links when night mode. */
 };
 
 // function that pushes dayMode styles
 const dayMode = () => {
-    ball.classList.toggle('ball')
-    body.style.backgroundColor = '#fafafa'
+    ball.classList.toggle('.ball')
     widget.style.backgroundColor = '#fafafa'
+    body.style.backgroundColor = '#fafafa'
     body.style.color = "#353839"
+    headerDayColors()
 };
 
-// function that alters header links for night mode.
 const headerNightColors = () => {
     header.forEach(element => {
         element.style.color = '#fafafa'
     })
 };
 
+const headerDayColors = () => {
+    header.forEach(element => {
+        element.style.color = '#353839'
+    })
+}
+
 // function that alters card colors for night mode
-const cardNightColors = () => {
+const cardColors = () => {
     card.forEach(element => {
         element.style.color = '#121212'
     })
 };
 
-// function that alters footer colors for night mode
-/* work in progress. need to complete this fix */
-const footerLinkColors = () => {
-    footerLinks.foreach(element => {
-        element.style.backgroundColor = '#fafafa'
-        element.style.borderRadius = '50%'
-    })
-};
-
 // observer that observes when scroll to target
 // change the background color change for a scroll animation
-
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         const intersecting = entry.isIntersecting
         /*entry.target.style.backgroundColor = intersecting ? "red" : "pink"; */ // chnage this to a scroll animation
     })
-}, {threshold: .25})
+}, {threshold: .25}) // 25% must be visible
 
-observer.observe(job); 
+// observer.observe(job); 
