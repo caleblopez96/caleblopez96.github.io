@@ -53,13 +53,13 @@ const footerLinkColors = () => {
 };
 
 // observer that observes when scroll to target
-// {threshold represents percent of forEach that must be vis b4 change}
 // change the background color change for a scroll animation
+/*
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         const intersecting = entry.isIntersecting
         entry.target.style.backgroundColor = intersecting ? "red" : "pink";
     })
-}, {threshold: .25})
+}, {threshold: .25}) // {threshold is % of forEach that must be vis b4 change}
 
-observer.observe(job);
+observer.observe(job); */
