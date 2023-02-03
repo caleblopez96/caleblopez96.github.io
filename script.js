@@ -4,7 +4,7 @@ const body = document.querySelector('body');
 const widget = document.querySelector('.widget');
 const header = document.querySelectorAll('.headerLink');
 const card = document.querySelectorAll('.card');
-const contributions = document.querySelector('#contributions');
+const job = document.querySelector('.job')
 
 // invoking night mode on click
 ball.addEventListener('click', () => {
@@ -52,22 +52,14 @@ const footerLinkColors = () => {
     })
 };
 
+// observer that observes when scroll to target
+// {threshold represents percent of forEach that must be vis b4 change}
+// change the background color change for a scroll animation
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        const intersecting = entry.isIntersecting
+        entry.target.style.backgroundColor = intersecting ? "red" : "pink";
+    })
+}, {threshold: .25})
 
-/* function that displays animation of github contributions in the last year... Finish/fix
-
-let updates = 0;
-
-const commitCountAnimation = anime({
-    targets: '#contributions',
-    translateX: 270,
-    delay: 1000,
-    direction: 'alternate',
-    loop: 3,
-    easing: 'easeInOutCirc',
-    update: function(anim) {
-        updates++
-        contributions.value = 'progress :'+Math.round(anim.progress)+'%';
-        updates.valueOf = 'updates : '+ updates;
-    }
-})
-*/
+observer.observe(job);
