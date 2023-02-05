@@ -8,6 +8,7 @@ const widget = document.querySelector('.widget');
 const header = document.querySelectorAll('.headerLink');
 const card = document.querySelectorAll('.card');
 const job = document.querySelector('.job');
+const jobs = document.querySelectorAll('.job')
 
 // Variables
 const offWhite = '#fafafa'
@@ -70,6 +71,7 @@ const observer = new IntersectionObserver(entries => {
         entry.target.style.animation = intersecting ? "slide-in-fwd-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both" : "none";
         /*entry.target.style.backgroundColor = intersecting ? "red" : "pink"; */ // chnage this to a scroll animation
     })
-}, {threshold: .4}) // 25% must be visible
-
-observer.observe(job); 
+}, {threshold: .5})
+observer.observe(jobs[0]);
+observer.observe(jobs[1]);
+observer.observe(jobs[2]);
