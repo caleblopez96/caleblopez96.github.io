@@ -10,14 +10,14 @@ const card = document.querySelectorAll('.card');
 const job = document.querySelector('.job');
 const jobs = document.querySelectorAll('.job')
 
-// Variables
+// Global Variables
 const offWhite = '#fafafa'
 const offBlack = "#353839"
 
 // Functions invokes day/night modes
 ball.addEventListener('click', () => {
     nightMode()
-    ball.addEventListener('click', () =>{
+        ball.addEventListener('click', () =>{
         dayMode()
     })
 });
@@ -30,7 +30,6 @@ const nightMode = () => {
     body.style.color = offWhite
     headerNightColors()
     cardColors()
-  /* add white icons as the source for footer links when night mode. */
 };
 
 // function that contains styles for daymode
@@ -68,8 +67,7 @@ const cardColors = () => {
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         const intersecting = entry.isIntersecting
-        entry.target.style.animation = intersecting ? "slide-in-fwd-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both" : "none";
-        /*entry.target.style.backgroundColor = intersecting ? "red" : "pink"; */ // chnage this to a scroll animation
+        entry.target.style.animation = intersecting ? "slide-in-fwd-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both" : "none"
     })
 }, {threshold: .5});
 observer.observe(jobs[0]);
