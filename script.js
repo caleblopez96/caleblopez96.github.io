@@ -71,7 +71,9 @@ const observer = new IntersectionObserver(entries => {
         entry.target.style.animation = intersecting ? "slide-in-fwd-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both" : "none";
         /*entry.target.style.backgroundColor = intersecting ? "red" : "pink"; */ // chnage this to a scroll animation
     })
-}, {threshold: .5})
+}, {threshold: .5});
 observer.observe(jobs[0]);
 observer.observe(jobs[1]);
 observer.observe(jobs[2]);
+
+/*  i should be able to loop over the array with forEach instead of observing each section individually. * fix this * */
