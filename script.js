@@ -67,8 +67,9 @@ const cardColors = () => {
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         const intersecting = entry.isIntersecting
+        entry.target.style.animation = intersecting ? "slide-in-fwd-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both" : "none";
         /*entry.target.style.backgroundColor = intersecting ? "red" : "pink"; */ // chnage this to a scroll animation
     })
-}, {threshold: .25}) // 25% must be visible
+}, {threshold: .4}) // 25% must be visible
 
-// observer.observe(job); 
+observer.observe(job); 

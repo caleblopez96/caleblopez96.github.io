@@ -84,10 +84,6 @@ footer a:hover {
   transform: scale(1.05);
 }
 
-header a:active {
-  color: red;
-}
-
 header p {
   margin-right: auto;
   cursor: pointer;
@@ -283,19 +279,6 @@ header p {
   word-wrap: break-word;
   width: fit-content;
 }
-/* scroll animation? */
-.scrollAnimation {
-  animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.00) both;
-}
-@keyframes fade-in-fwd {
-  0% {
-    transform: translateZ(-80px);
-  }
-  100% {
-    transform: translateZ(0);
-    opacity: 1;
-  }
-}
 
 .button:hover {
   color: #F5F5F5;
@@ -343,6 +326,18 @@ li {
 
 .job {
   border-bottom: 2px dotted #353839;
+  animation: none;
+}
+
+@keyframes slide-in-fwd-center {
+  0% {
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
 }
 
 .school {
