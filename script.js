@@ -69,7 +69,7 @@ const observer = new IntersectionObserver(entries => {
         const intersecting = entry.isIntersecting
         entry.target.style.animation = intersecting ? "slide-in-fwd-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both" : "none"
     })
-}, {threshold: .5});
+}, {threshold: .55});
 observer.observe(jobs[0]);
 observer.observe(jobs[1]);
 observer.observe(jobs[2]);
