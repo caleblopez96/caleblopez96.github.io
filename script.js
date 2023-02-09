@@ -62,8 +62,7 @@ const cardColors = () => {
     })
 };
 
-// observer that observes when scroll to target
-// change the background color change for a scroll animation
+// intersection observer to observe animation.
 const observer = new IntersectionObserver(entries => {
     entries.forEach((entry => {
         const intersecting = entry.isIntersecting
