@@ -11,15 +11,15 @@ const jobs = document.querySelectorAll('.job');
 const schools = document.querySelectorAll('.school');
 
 // Global Variables
-const offWhite = '#fafafa'
-const offBlack = "#353839"
+const offWhite = '#fafafa';
+const offBlack = '#353839';
 
 // Functions invokes day/night modes
 ball.addEventListener('click', () => {
     nightMode()
         ball.addEventListener('click', () =>{
         dayMode()
-    })
+    });
 });
 
 // Function that contains styles for nightmode
@@ -53,12 +53,12 @@ const headerDayColors = () => {
     header.forEach(element => {
         element.style.color = offBlack
     })
-}
+};
 
 // function that contains styles for cards
 const cardColors = () => {
     card.forEach(element => {
-        element.style.color = '#121212'
+        element.style.color = '#121212';
     })
 };
 
@@ -67,9 +67,9 @@ const cardColors = () => {
 const observer = new IntersectionObserver(entries => {
     entries.forEach((entry => {
         const intersecting = entry.isIntersecting
-        entry.target.style.animation = intersecting ? "slide-in-fwd-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both" : "none"
+        entry.target.style.animation = intersecting ? 'slide-in-fwd-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both' : 'none'
     }))
-}, {threshold: .05});
+}, /*{threshold: .1}*/);
 
 jobs.forEach((job => {
     observer.observe(job)
