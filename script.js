@@ -7,8 +7,8 @@ const body = document.querySelector('body');
 const widget = document.querySelector('.widget');
 const header = document.querySelectorAll('.headerLink');
 const card = document.querySelectorAll('.card');
-const job = document.querySelector('.job');
-const jobs = document.querySelectorAll('.job')
+const jobs = document.querySelectorAll('.job');
+const schools = document.querySelectorAll('.school');
 
 // Global Variables
 const offWhite = '#fafafa'
@@ -75,3 +75,6 @@ jobs.forEach((job => {
     observer.observe(job)
 }));
 
+schools.forEach((school => {
+    observer.observe(school)
+}));
