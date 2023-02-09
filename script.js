@@ -70,10 +70,6 @@ const observer = new IntersectionObserver(entries => {
     }))
 });
 
-jobs.forEach((job => {
-    observer.observe(job)
-}));
+jobs.forEach(job => observer.observe(job));
 
-schools.forEach((school => {
-    observer.observe(school)
-}));
+schools.forEach(school => observer.observe(school));
