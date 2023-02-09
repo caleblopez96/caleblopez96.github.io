@@ -1,7 +1,7 @@
 // FILE PENDING REFACTOR
 
 // Selectors
-const html = document.querySelector('html')
+const html = document.querySelector('html');
 const ball = document.querySelector('.ball');
 const body = document.querySelector('body');
 const widget = document.querySelector('.widget');
@@ -10,16 +10,16 @@ const card = document.querySelectorAll('.card');
 const jobs = document.querySelectorAll('.job');
 const schools = document.querySelectorAll('.school');
 
-// Global Variables
+// Color Variables
 const offWhite = '#fafafa';
 const offBlack = '#353839';
 
 // Functions invokes day/night modes
 ball.addEventListener('click', () => {
     nightMode()
-        ball.addEventListener('click', () =>{
+        ball.addEventListener('click', () => {
         dayMode()
-    });
+    })
 });
 
 // Function that contains styles for nightmode
@@ -68,7 +68,7 @@ const observer = new IntersectionObserver(entries => {
         const intersecting = entry.isIntersecting
         entry.target.style.animation = intersecting ? 'slide-in-fwd-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both' : 'none'
     }))
-}, /*{threshold: .1}*/);
+});
 
 jobs.forEach((job => {
     observer.observe(job)
