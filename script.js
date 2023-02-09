@@ -65,13 +65,13 @@ const cardColors = () => {
 // observer that observes when scroll to target
 // change the background color change for a scroll animation
 const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
+    entries.forEach((entry => {
         const intersecting = entry.isIntersecting
-        entry.target.style.animation = intersecting ? "slide-in-fwd-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both" : "none"
-    })
-}, {threshold: .55});
-observer.observe(jobs[0]);
-observer.observe(jobs[1]);
-observer.observe(jobs[2]);
+        entry.target.style.animation = intersecting ? "slide-in-fwd-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both" : "none"
+    }))
+}, {threshold: .05});
 
-/*  i should be able to loop over the array with forEach instead of observing each section individually. * fix this * */
+jobs.forEach((job => {
+    observer.observe(job)
+}));
+
