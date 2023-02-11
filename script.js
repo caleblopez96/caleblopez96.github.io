@@ -14,6 +14,7 @@ const schools = document.querySelectorAll('.school');
 const offWhite = '#fafafa';
 const offBlack = '#353839';
 
+// fix this logic. stops workng after a few clicks. Maybe add a day and night mode button instead
 // Functions invokes day/night modes
 ball.addEventListener('click', () => {
     nightMode()
