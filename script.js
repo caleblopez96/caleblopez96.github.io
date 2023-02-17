@@ -2,6 +2,11 @@
 // ON CLICK OF SUN ACTIVATE DAY MODE
 // ON CLICK OF MOON ACTIVATE NIGHT MODE
 
+// make header sticky 
+// add intersection observer to each section of the page 
+// add an underline effect to the section name in the nav bar
+// let viewer know where they are on the page
+
 // Selectors
 const html = document.querySelector('html');
 const ball = document.querySelector('.ball');
