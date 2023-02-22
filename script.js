@@ -7,6 +7,8 @@
 // add an underline effect to the section name in the nav bar
 // let viewer know where they are on the page
 
+// use bootstrap to implement dropdown hamburger menu for mobile
+
 // Selectors
 const html = document.querySelector('html');
 const body = document.querySelector('body');
@@ -14,7 +16,8 @@ const header = document.querySelectorAll('.headerLink');
 const card = document.querySelectorAll('.card');
 const jobs = document.querySelectorAll('.job');
 const schools = document.querySelectorAll('.school');
-const modeToggler = document.querySelector('.dayNightMode')
+const modeToggler = document.querySelector('.dayNightMode');
+const toggleIcon = document.querySelector('.toggleIcon');
 
 // Color Variables
 const offWhite = '#fafafa';
@@ -25,6 +28,7 @@ modeToggler.addEventListener('click', () => {
     // define the icon that needs to be change 
     // create a function that changes the icon on click
     // then invokes the styles created below.
+    toggleIcon.src = 'icons8-sun-20.png' // fix this
 });
 
 // Function that contains styles for nightmode
