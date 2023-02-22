@@ -35,38 +35,10 @@ header {
   border-bottom: 2px dotted #353839;
 }
 
-.widget {
-  height: 20px;
-  width: 40px;
-  border: 2px solid black;
-  border-radius: 50px;
-  position: relative;
-  padding: .08rem;
-}
-
-.ball {
-  content: '';
+.dayNightMode {
+  background: none;
+  border: none;
   cursor: pointer;
-  position: absolute;
-  height: 90%;
-  width: 40%;
-  border-radius: 50%;
-  border: 2px solid black;
-  background-color: #171717;
-  top: 5%;
-}
-
-/* for night mode*/
-.nightMode {
-  content: '';
-  cursor: pointer;
-  position: absolute;
-  height: 99%;
-  width: 45%;
-  border-radius: 50%;
-  top: 0%;
-  left: 54%;
-  border: 2px solid #f5f5Fa;
 }
 
 h1,

@@ -1,4 +1,4 @@
-// CHANGE THE NIGHT MODE SELECTOR TO A SUN AND MOON 
+// CHANGE THE NIGHT MODE SELECTOR TO A SUN AND MOON (DONE)
 // ON CLICK OF SUN ACTIVATE DAY MODE
 // ON CLICK OF MOON ACTIVATE NIGHT MODE
 
@@ -9,31 +9,23 @@
 
 // Selectors
 const html = document.querySelector('html');
-const ball = document.querySelector('.ball');
 const body = document.querySelector('body');
-const widget = document.querySelector('.widget');
 const header = document.querySelectorAll('.headerLink');
 const card = document.querySelectorAll('.card');
 const jobs = document.querySelectorAll('.job');
 const schools = document.querySelectorAll('.school');
+const modeToggler = document.querySelector('.dayNightMode')
 
 // Color Variables
 const offWhite = '#fafafa';
 const offBlack = '#353839';
 
-// fix this logic. stops workng after a few clicks. Maybe add a day and night mode button instead
-// Functions invokes day/night modes
-ball.addEventListener('click', () => {
-    nightMode()
-        ball.addEventListener('click', () => {
-        dayMode()
-    })
-});
+modeToggler.addEventListener('click', () => {
+    // create the function to toggle mod
+})
 
 // Function that contains styles for nightmode
 const nightMode = () => {
-    ball.classList.toggle('nightMode')
-    widget.style.backgroundColor = offWhite
     body.style.backgroundColor = '#0b1117'
     body.style.color = offWhite
     headerNightColors()
@@ -42,8 +34,6 @@ const nightMode = () => {
 
 // function that contains styles for daymode
 const dayMode = () => {
-    ball.classList.toggle('.ball')
-    widget.style.backgroundColor = offWhite
     body.style.backgroundColor = offWhite
     body.style.color = offBlack
     headerDayColors()
