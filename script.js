@@ -21,8 +21,11 @@ const offWhite = '#fafafa';
 const offBlack = '#353839';
 
 modeToggler.addEventListener('click', () => {
-    // create the function to toggle mod
-})
+    // create the function to toggle mode
+    // define the icon that needs to be change 
+    // create a function that changes the icon on click
+    // then invokes the styles created below.
+});
 
 // Function that contains styles for nightmode
 const nightMode = () => {
