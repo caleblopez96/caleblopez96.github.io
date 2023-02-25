@@ -65,6 +65,10 @@ header p {
   cursor: pointer;
 }
 
+.toggleIcon {
+  cursor: pointer;
+}
+
 .hero {
   display: flex;
   flex-direction: column;

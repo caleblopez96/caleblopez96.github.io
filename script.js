@@ -2,11 +2,6 @@
 // ON CLICK OF SUN ACTIVATE DAY MODE
 // ON CLICK OF MOON ACTIVATE NIGHT MODE
 
-// make header sticky 
-// add intersection observer to each section of the page 
-// add an underline effect to the section name in the nav bar
-// let viewer know where they are on the page
-
 // use bootstrap to implement dropdown hamburger menu for mobile
 
 // Selectors
@@ -16,20 +11,18 @@ const header = document.querySelectorAll('.headerLink');
 const card = document.querySelectorAll('.card');
 const jobs = document.querySelectorAll('.job');
 const schools = document.querySelectorAll('.school');
-const modeToggler = document.querySelector('.dayNightMode');
 const toggleIcon = document.querySelector('.toggleIcon');
 
 // Color Variables
 const offWhite = '#fafafa';
 const offBlack = '#353839';
 
-modeToggler.addEventListener('click', () => {
-    // create the function to toggle mode
-    // define the icon that needs to be change 
-    // create a function that changes the icon on click
-    // then invokes the styles created below.
-    toggleIcon.src = 'icons8-sun-20.png' // fix this
+toggleIcon.addEventListener('click', () => {
+    check()
+    // figure out why this only works on first click
 });
+
+const check = () => toggleIcon.src === '/icons/sun.png' ? dayMode() : (toggleIcon.src = '/icons/sun.png', nightMode());
 
 // Function that contains styles for nightmode
 const nightMode = () => {
