@@ -1,6 +1,3 @@
-// CHANGE THE NIGHT MODE SELECTOR TO A SUN AND MOON (DONE)
-// ON CLICK OF SUN ACTIVATE DAY MODE
-// ON CLICK OF MOON ACTIVATE NIGHT MODE
 
 // use bootstrap to implement dropdown hamburger menu for mobile
 
@@ -17,12 +14,17 @@ const toggleIcon = document.querySelector('.toggleIcon');
 const offWhite = '#fafafa';
 const offBlack = '#353839';
 
-toggleIcon.addEventListener('click', () => {
-    check()
-    // figure out why this only works on first click
-});
+let isNightMode = false;
 
-const check = () => toggleIcon.src === '/icons/sun.png' ? dayMode() : (toggleIcon.src = '/icons/sun.png', nightMode());
+toggleIcon.addEventListener('click', () => {
+    isNightMode = !isNightMode
+    if(isNightMode === true) {
+        nightMode()
+        toggleIcon.setAttribute('src', '/icons/sun.png')
+    } else {
+        dayMode()
+        toggleIcon.setAttribute('src', 'icons/icons8-night-mode-20.png')
+}});
 
 // Function that contains styles for nightmode
 const nightMode = () => {
