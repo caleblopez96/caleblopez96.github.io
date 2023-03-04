@@ -22,7 +22,7 @@ toggleIcon.addEventListener('click', () => {
 });
 
 // Function that contains styles for nightmode
-const nightMode = () => {
+const nightMode = function() {
     body.style.backgroundColor = '#0b1117'
     body.style.color = offWhite
     headerNightColors()
@@ -30,7 +30,7 @@ const nightMode = () => {
 };
 
 // function that contains styles for daymode
-const dayMode = () => {
+const dayMode = function() {
     body.style.backgroundColor = offWhite
     body.style.color = offBlack
     headerDayColors()
