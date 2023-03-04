@@ -14,17 +14,12 @@ const toggleIcon = document.querySelector('.toggleIcon');
 const offWhite = '#fafafa';
 const offBlack = '#353839';
 
-let isNightMode = false;
 
+let isNightMode = false;
 toggleIcon.addEventListener('click', () => {
-    isNightMode = !isNightMode
-    if(isNightMode === true) {
-        nightMode()
-        toggleIcon.setAttribute('src', '/icons/sun.png')
-    } else {
-        dayMode()
-        toggleIcon.setAttribute('src', 'icons/icons8-night-mode-20.png')
-}});
+    isNightMode = !isNightMode;
+    isNightMode ? (nightMode(), toggleIcon.setAttribute('src', '/icons/sun.png')) : (dayMode(), toggleIcon.setAttribute('src', 'icons/icons8-night-mode-20.png'));
+});
 
 // Function that contains styles for nightmode
 const nightMode = () => {
