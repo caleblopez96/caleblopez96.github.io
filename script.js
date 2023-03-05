@@ -53,7 +53,7 @@ const headerDayColors = () => {
 // function that contains styles for cards
 const cardColors = () => {
     card.forEach(element => {
-        element.style.color = '#121212';
+        element.style.color = '#121212'
     })
 };
 
