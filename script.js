@@ -1,5 +1,5 @@
-
 // use bootstrap to implement dropdown hamburger menu for mobile
+// do this by toggling a bootstrap class for dropdown menu when screensize is hit. (maybe implement in css instead using media queries)
 
 // Selectors
 const html = document.querySelector('html');
@@ -14,46 +14,46 @@ const toggleIcon = document.querySelector('.toggleIcon');
 const offWhite = '#fafafa';
 const offBlack = '#353839';
 
-
+// night mode function
 let isNightMode = false;
 toggleIcon.addEventListener('click', () => {
     isNightMode = !isNightMode;
-    isNightMode ? (nightMode(), toggleIcon.setAttribute('src', '/icons/sun.png')) : (dayMode(), toggleIcon.setAttribute('src', 'icons/icons8-night-mode-20.png'));
+    isNightMode ? (nightMode(), toggleIcon.setAttribute('src', '/icons/sun.png')) : (dayMode(), toggleIcon.setAttribute('src', 'icons/moon.png'));
 });
 
 // Function that contains styles for nightmode
 const nightMode = function() {
-    body.style.backgroundColor = '#0b1117'
-    body.style.color = offWhite
-    headerNightColors()
-    cardColors()
-};
+    body.style.backgroundColor = '#0b1117';
+    body.style.color = offWhite;
+    headerNightColors();
+    cardColors();
+}
 
 // function that contains styles for daymode
 const dayMode = function() {
-    body.style.backgroundColor = offWhite
-    body.style.color = offBlack
-    headerDayColors()
-};
+    body.style.backgroundColor = offWhite;
+    body.style.color = offBlack;
+    headerDayColors();
+}
 
 // function that contains style changes for header for night
 const headerNightColors = () => {
     header.forEach(element => {
-        element.style.color = offWhite
+        element.style.color = offWhite;
     })
-};
+}
 
 // function that contains style changes for header for day
 const headerDayColors = () => {
     header.forEach(element => {
-        element.style.color = offBlack
+        element.style.color = offBlack;
     })
 };
 
 // function that contains styles for cards
 const cardColors = () => {
     card.forEach(element => {
-        element.style.color = '#121212'
+        element.style.color = '#121212';
     })
 };
 
@@ -61,10 +61,35 @@ const cardColors = () => {
 const observer = new IntersectionObserver(entries => {
     entries.forEach((entry => {
         const intersecting = entry.isIntersecting
-        entry.target.style.animation = intersecting ? 'slide-in-fwd-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both' : 'none'
+        entry.target.style.animation = intersecting ? 'slide-in-fwd-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both' : 'none';
     }))
 });
 
-jobs.forEach(job => observer.observe(job));
+// Applying intersection observer to elements
+const observeElements = function(...elements) {
+    elements.forEach((element) => observer.observe(element));
+}
+observeElements(...jobs, ...schools);
 
-schools.forEach(school => observer.observe(school));
+
+
+
+// API request for github contributions
+/*
+const username = 'caleblopez96';
+const endpoint =`https://api.github.com/users/${username}/stats/`;
+
+fetch(endpoint, {
+    header: {
+        Authorization: `token ${apiToken}`
+    }
+})
+.then(response => response.json())
+.then(data => {
+    const githubContributions = data.total
+    console.log(githubContributions)
+})
+.catch(error => {
+    console.error(error)
+})
+*/
