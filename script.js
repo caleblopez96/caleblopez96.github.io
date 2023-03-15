@@ -74,7 +74,7 @@ observeElements(...jobs, ...schools);
 
 
 
-// API request for github contributions
+// API request for github contributions for dynamically updated contributions 
 /*
 const username = 'caleblopez96';
 const endpoint =`https://api.github.com/users/${username}/stats/`;
