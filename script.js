@@ -18,7 +18,7 @@ const offBlack = '#353839';
 let isNightMode = false;
 toggleIcon.addEventListener('click', () => {
     isNightMode = !isNightMode;
-    isNightMode ? (nightMode(), toggleIcon.setAttribute('src', '/icons/sun.png')) : (dayMode(), toggleIcon.setAttribute('src', 'icons/moon.png'));
+    isNightMode ? (nightMode(), toggleIcon.setAttribute('src', '/icons/sun.png')) : (dayMode(), toggleIcon.setAttribute('src', '/icons/moon.png'));
 });
 
 // Function that contains styles for nightmode
@@ -70,7 +70,6 @@ const observeElements = function(...elements) {
     elements.forEach((element) => observer.observe(element));
 }
 observeElements(...jobs, ...schools);
-
 
 
 
