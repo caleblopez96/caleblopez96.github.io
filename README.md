@@ -1,5 +1,5 @@
-**Caleb Lopez** <br>
-Hello! My name is Caleb and I am a full-time student currently pursuing an Associate in Arts degree at Glendale Community College while concurrently fulfilling the prerequisites for admission to Arizona State University's BS in Full-Stack Web Development program. 
+**Hello! My name is Caleb** <br>
+I am a full-time student currently pursuing an Associate in Arts degree at Glendale Community College while concurrently fulfilling the prerequisites for admission to Arizona State University's BS in Full-Stack Web Development program. 
 
 I am passionate about logical problem solving and UI/UX design which made the decision to pursue full-stack web development easy. I prioritize writing maintainable and scalable code and understand how important attention to detail is for a full-stack web developer. 
 <br>
