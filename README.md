@@ -4,11 +4,11 @@ Hello! My name is Caleb and I am a full-time student currently pursuing an Assoc
 I am passionate about logical problem solving and UI/UX design which made the decision to pursue full-stack web development easy. I prioritize writing maintainable and scalable code and understand how important attention to detail is for a full-stack web developer. 
 <br>
 
-**Projects**
+**Projects**<br>
 I have created numerous projects in my spare time. They can be found here on Github, or live over on Codepen: https://codepen.io/dableb.
 
-**Skills**
+**Skills**<br>
 Currently, I am proficient in HTML, CSS, and JavaScript, and enjoy creating small to medium-sized web applications. 
 
-**Contact:**
+**Contact:**<br>
 If you have any questions about this script, you can reach me at caleblopez96@gmail.com
