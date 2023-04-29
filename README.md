@@ -1,5 +1,3 @@
-Instagram Like Automation
-
 **Caleb Lopez** <br>
 Hello! My name is Caleb and I am a full-time student currently pursuing an Associate in Arts degree at Glendale Community College while concurrently fulfilling the prerequisites for admission to Arizona State University's BS in Full-Stack Web Development program. 
 
