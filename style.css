@@ -291,6 +291,10 @@ header p {
   padding: 0 .5rem;
 }
 
+p {
+  margin-bottom: .35rem;
+}
+
 .aboutMe h3 {
   padding: 1rem 0;
   font-family: 'Inter', sans-serif;
