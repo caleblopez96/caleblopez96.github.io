@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;900&family=Nunito:wght@200;1000&display=swap');
 
-/* CHANGE THE NIGHT MODE SELECTOR TO A SUN AND MOON */
-/* ON CLICK OF SUN ACTIVATE DAY MODE */
-/* ON CLICK OF MOON ACTIVATE NIGHT MODE */
 
 *,
 *::before,
@@ -298,6 +295,7 @@ p {
 .aboutMe h3 {
   padding: 1rem 0;
   font-family: 'Inter', sans-serif;
+  
 }
 
 li {
@@ -342,6 +340,10 @@ li {
 .bold {
   font-weight: 600;
   font-family: 'Inter', sans-serif;
+}
+
+.greeting {
+  letter-spacing: 2.5px;
 }
 
 footer {

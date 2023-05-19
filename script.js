@@ -57,7 +57,7 @@ const cardColors = () => {
     })
 };
 
-// intersection observer to observe animation.
+// intersection observer to observe when animation needs to play.
 const observer = new IntersectionObserver(entries => {
     entries.forEach((entry => {
         const intersecting = entry.isIntersecting
@@ -72,23 +72,18 @@ const observeElements = function(...elements) {
 observeElements(...jobs, ...schools);
 
 
+const gitHubContributions = document.querySelector('.githubContributions');
 
-// API request for github contributions for dynamically updated contributions 
-/*
-const username = 'caleblopez96';
-const endpoint =`https://api.github.com/users/${username}/stats/`;
-
-fetch(endpoint, {
-    header: {
-        Authorization: `token ${apiToken}`
-    }
+const githubObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        const intersecting = entry.isIntersecting;
+        if(entry.isIntersecting) {
+            anime({
+                targets: 'input',
+                value: [0, 419],
+                round: 1,
+                easing: 'easeInOutExpo'
+            })
+        }
+    })
 })
-.then(response => response.json())
-.then(data => {
-    const githubContributions = data.total
-    console.log(githubContributions)
-})
-.catch(error => {
-    console.error(error)
-})
-*/
