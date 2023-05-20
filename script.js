@@ -74,10 +74,10 @@ observeElements(...jobs, ...schools);
 
 const gitHubContributions = document.querySelector('.githubContributions');
 
-const githubObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
+const githubObserver = new IntersectionObserver(entries  => {
+    entries.forEach((entry => {
         const intersecting = entry.isIntersecting;
-        if(entry.isIntersecting) {
+        if(intersecting) {
             anime({
                 targets: 'input',
                 value: [0, 419],
@@ -86,4 +86,4 @@ const githubObserver = new IntersectionObserver((entries, observer) => {
             })
         }
     })
-})
+)})
