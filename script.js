@@ -1,14 +1,12 @@
-// use bootstrap to implement dropdown hamburger menu for mobile
-// do this by toggling a bootstrap class for dropdown menu when screensize is hit. (maybe implement in css instead using media queries)
 
 // Selectors
-const html = document.querySelector('html');
 const body = document.querySelector('body');
 const header = document.querySelectorAll('.headerLink');
 const card = document.querySelectorAll('.card');
 const jobs = document.querySelectorAll('.job');
 const schools = document.querySelectorAll('.school');
 const toggleIcon = document.querySelector('.toggleIcon');
+const gitHubContributions = document.querySelector('.githubContributions');
 
 // Color Variables
 const offWhite = '#fafafa';
@@ -71,16 +69,14 @@ const observeElements = function(...elements) {
 }
 observeElements(...jobs, ...schools);
 
-
-const gitHubContributions = document.querySelector('.githubContributions');
-
+// animation for github contributions
 const githubObserver = new IntersectionObserver(entries  => {
     entries.forEach((entry => {
         const intersecting = entry.isIntersecting;
         if(intersecting) {
             anime({
                 targets: 'input',
-                value: [0, 419],
+                value: [0, 421],
                 round: 1,
                 easing: 'easeInOutExpo'
             })
