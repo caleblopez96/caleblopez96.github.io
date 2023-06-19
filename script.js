@@ -20,7 +20,7 @@ toggleIcon.addEventListener('click', () => {
 });
 
 // Function that contains styles for nightmode
-const nightMode = function() {
+function nightMode() {
     body.style.backgroundColor = '#0b1117';
     body.style.color = offWhite;
     headerNightColors();
@@ -28,7 +28,7 @@ const nightMode = function() {
 }
 
 // function that contains styles for daymode
-const dayMode = function() {
+function dayMode() {
     body.style.backgroundColor = offWhite;
     body.style.color = offBlack;
     headerDayColors();
@@ -69,17 +69,7 @@ const observeElements = function(...elements) {
 }
 observeElements(...jobs, ...schools);
 
-// animation for github contributions
-const githubObserver = new IntersectionObserver(entries  => {
-    entries.forEach((entry => {
-        const intersecting = entry.isIntersecting;
-        if(intersecting) {
-            anime({
-                targets: 'input',
-                value: [0, 421],
-                round: 1,
-                easing: 'easeInOutExpo'
-            })
-        }
-    })
-)})
+
+//TODO 
+// when night mode, header doesnt go to the right color
+// add a 3D ish effect to the project cards by maybe using :before
