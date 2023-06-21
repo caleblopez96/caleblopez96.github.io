@@ -72,4 +72,4 @@ observeElements(...jobs, ...schools);
 
 //TODO 
 // when night mode, header doesnt go to the right color
-// add a 3D ish effect to the project cards by maybe using :before
+// add a 3D ish effect to the project cards by maybe using :before --> BASICALLY JUST GET RID OF THE UGLY ASS BORDER
