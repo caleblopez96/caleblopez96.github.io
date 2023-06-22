@@ -73,3 +73,9 @@ observeElements(...jobs, ...schools);
 //TODO 
 // when night mode, header doesnt go to the right color
 // add a 3D ish effect to the project cards by maybe using :before --> BASICALLY JUST GET RID OF THE UGLY ASS BORDER
+
+// finish contact me page
+
+// create the contact me page
+
+// make header mobile responsive with hamburger menu drop down. 
